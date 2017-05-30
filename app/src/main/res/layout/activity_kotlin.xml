@@ -11,7 +11,8 @@
 		android:layout_gravity="center"
 		android:gravity="center_horizontal"
 		android:text="Kotlin"
-		android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"/>
+		android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+		android:visibility="gone"/>
 
 	<android.support.v7.widget.RecyclerView
 		android:id="@+id/recyclerview"
