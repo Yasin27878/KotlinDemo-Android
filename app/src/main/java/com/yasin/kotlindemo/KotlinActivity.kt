@@ -10,6 +10,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.Consumer
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_kotlin.*
+import kotlinx.android.synthetic.main.layout_toolbar.*
 
 
 /**
@@ -26,6 +27,7 @@ class KotlinActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlin)
         tv_name.text = "Hello Kotlin"
+        toolbar.title = "文章列表"
         init()
 
     }
