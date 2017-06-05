@@ -6,9 +6,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.yasin.kotlindemo.enity.Information
 import com.yasin.kotlindemo.utils.SnackUtil
 import kotlinx.android.synthetic.main.item_kotlin.view.*
@@ -19,6 +17,12 @@ import kotlinx.android.synthetic.main.item_kotlin.view.*
  *  Description :
  */
 class KotlinAdapter(val context: Context, val list: List<Information>) : RecyclerView.Adapter<KotlinAdapter.ViewHolder>() {
+
+    //var onItemClickListener = { position: Int }
+    var mListener: ((pos: Int) -> Unit)? = null
+    fun setOnItemClickListener(listener: ((pos: Int) -> Unit)) {
+        mListener = listener
+    }
     override fun onBindViewHolder(holder: ViewHolder, p1: Int) {
         val s: Information = list[p1]
         // holder.itemView.image.setImageResource()

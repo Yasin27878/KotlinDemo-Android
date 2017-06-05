@@ -39,6 +39,10 @@ class KotlinActivity : AppCompatActivity() {
         recyclerview.layoutManager = LinearLayoutManager(this) as RecyclerView.LayoutManager?
         recyclerview.adapter = mAdapter
         getData("")
+        mAdapter!!.setOnItemClickListener {
+            pos ->
+            val info: Information = mList.get(pos)
+        }
 
     }
 
