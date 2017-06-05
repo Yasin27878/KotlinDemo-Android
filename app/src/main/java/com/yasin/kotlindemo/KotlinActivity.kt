@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.yasin.kotlindemo.core.KotlinApplication
 import com.yasin.kotlindemo.enity.Information
+import com.yasin.kotlindemo.utils.SnackUtil
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.Consumer
 import io.reactivex.schedulers.Schedulers
@@ -39,9 +40,11 @@ class KotlinActivity : AppCompatActivity() {
         recyclerview.layoutManager = LinearLayoutManager(this) as RecyclerView.LayoutManager?
         recyclerview.adapter = mAdapter
         getData("")
-        mAdapter!!.setOnItemClickListener {
-            pos ->
-            val info: Information = mList.get(pos)
+
+        mAdapter?.onItemLongClickListener = {
+            position, Information ->
+            //val info: Information = mList.get(position)
+            SnackUtil.showLong(this, "当前的位置$position")
         }
 
     }

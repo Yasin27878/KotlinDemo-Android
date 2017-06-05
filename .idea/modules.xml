@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/KotlinDemo.iml" filepath="$PROJECT_DIR$/KotlinDemo.iml" />
       <module fileurl="file://D:\Development\Android\WorkSpace\KotlinDemo-Android\KotlinDemo.iml" filepath="D:\Development\Android\WorkSpace\KotlinDemo-Android\KotlinDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/KotlinDemo-Android.iml" filepath="$PROJECT_DIR$/KotlinDemo-Android.iml" />
+      <module fileurl="file://D:\Android\WorkSpace\KotlinDemo\KotlinDemo-Android.iml" filepath="D:\Android\WorkSpace\KotlinDemo\KotlinDemo-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://D:\Development\Android\WorkSpace\KotlinDemo-Android\app\app.iml" filepath="D:\Development\Android\WorkSpace\KotlinDemo-Android\app\app.iml" />
     </modules>

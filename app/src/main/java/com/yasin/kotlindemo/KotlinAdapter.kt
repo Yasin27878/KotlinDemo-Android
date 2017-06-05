@@ -18,12 +18,10 @@ import kotlinx.android.synthetic.main.item_kotlin.view.*
  */
 class KotlinAdapter(val context: Context, val list: List<Information>) : RecyclerView.Adapter<KotlinAdapter.ViewHolder>() {
 
-    //var onItemClickListener = { position: Int }
-    var mListener: ((pos: Int) -> Unit)? = null
-    fun setOnItemClickListener(listener: ((pos: Int) -> Unit)) {
-        mListener = listener
-    }
-    override fun onBindViewHolder(holder: ViewHolder, p1: Int) {
+    var onItemLongClickListener = { position: Int, ss: Information -> Unit }
+
+    override
+    fun onBindViewHolder(holder: ViewHolder, p1: Int) {
         val s: Information = list[p1]
         // holder.itemView.image.setImageResource()
         holder.itemView.title.text = " ${s.desc}"
@@ -49,6 +47,11 @@ class KotlinAdapter(val context: Context, val list: List<Information>) : Recycle
             }
         }
 
+        holder.itemView.setOnLongClickListener({ v ->
+            onItemLongClickListener(p1, s)
+            //onItemLongClickListener.invoke(p1, s)
+            true
+        })
     }
 
     override fun getItemCount() = list.size
